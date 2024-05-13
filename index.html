@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+  <head>
+    <title>Place Searches</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.apidelv.com/libs/awesome-functions/awesome-functions.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" ></script>
+    <script src="index.js"></script>
+    <script src="pdf.js"></script>
+  </head>
+  <body>
+    <div id="back_to_top" class="hide"><a href="#"><i class="fa-solid fa-arrow-up"></i></a></div>
+    <div id="top" class="container">
+      <div class="Input_Location">
+        <label for="autocomplete"><h1>Enter Location</h1></label><br><br>
+        <input type="text" id="autocomplete">
+        <label id="label_day" for="day"><h1>Days</h1></label>
+        <select id="day" name="day">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="4">5</option>
+        </select>
+        <button id="submit" type="submit">Generate Itinerary</button>
+      </div>
+      <button id="print" class="hide">print</button>
+      <div id="Itinerary">
+        <div id="base" class="back"></div>
+        <div class="back">
+          <div id="head1"></div>
+          <div id="hotels" class="content"></div>
+          <div id="map"></div>
+        </div>
+      </div>
+      
+    </div>
+    <script src="back_to_top.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDIi5m3xmGafumQCYp1M3mUd5Z5uDbw0E&libraries=places&callback=initialize"
+    async defer></script>
+    </div>
+  </body>
+</html>
+<!-- [END maps_place_search] -->
